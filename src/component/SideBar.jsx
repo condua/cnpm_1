@@ -93,7 +93,7 @@ const SideBar = ({ children }) => {
       <div className="main-container">
         <motion.div
           animate={{
-            width: isOpen ? "250px" : "45px",
+            width: isOpen ? "250px" : "60px",
 
             transition: {
               duration: 0.5,
@@ -115,7 +115,7 @@ const SideBar = ({ children }) => {
                 >
 
                   {/* <h1><img src={require('../img/logo.png')} style={{width:'50px',height:'50px'}}/> Admin</h1> */}
-                  <h1> Admin</h1>
+                  <h5>Task Management</h5>
 
                 </motion.h1>
               )}

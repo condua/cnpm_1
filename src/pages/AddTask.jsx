@@ -4,10 +4,10 @@ import React, {useState} from 'react';
 // import {BsFillArrowRightCircleFill} from "react-icons/bs"
 // import {CiSquarePlus} from "react-icons/ci"
 
-const Dashboard = () => {
+const AddTask = () => {
     return (
-      <h1>Dashboard main content</h1>
+      <h1>Add new task</h1>
     );
 };
 
-export default Dashboard;
+export default AddTask;
