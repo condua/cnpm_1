@@ -39,7 +39,7 @@ const dashboard = () => {
                           Dashboard
                     </div>
                     <div className='Right'>
-                          <p><CiSquarePlus/>Add task</p>
+                          <p><CiSquarePlus style={{paddingTop:'2px',fontSize:'20px'}}/>Add task</p>
                     </div>
                     <div class="dropdown">
                                 <div id="myDropdown" class="dropdown-content">

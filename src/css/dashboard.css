@@ -47,6 +47,8 @@
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    top: -97px;
+    
 }
   
 .dropdown-content a {
@@ -76,8 +78,11 @@
    border: 1px solid black;
    border-radius: 20px;
    text-align: center;
+   align-items: center;
    padding-top: 10px;
+   right: -110px;
    color:white;
    background-color: #8EC3B0;
    font-weight: bolder;
+   cursor: pointer;
 }
