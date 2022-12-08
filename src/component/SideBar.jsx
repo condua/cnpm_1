@@ -101,7 +101,7 @@ const SideBar = ({ children }) => {
               damping: 10,
             },
           }}
-          className={`sidebar `}
+          className={`sidebar`}
         >
           <div className="top_section">
             <AnimatePresence>
@@ -113,23 +113,21 @@ const SideBar = ({ children }) => {
                   exit="hidden"
                   className="logo"
                 >
-
                   {/* <h1><img src={require('../img/logo.png')} style={{width:'50px',height:'50px'}}/> Admin</h1> */}
                   <h5>Task Management</h5>
-
                 </motion.h1>
               )}
             </AnimatePresence>
 
             <div className="bars">
               <FaBars onClick={toggle} />
-            </div>
+          </div>
           </div>
           <div className="search">
-            <div className="search_icon">
-              <BiSearch />
-            </div>
             <AnimatePresence>
+              <div className="search_icon">
+                <BiSearch />
+              </div>
               {isOpen && (
                 <motion.input
                   initial="hidden"
@@ -159,8 +157,9 @@ const SideBar = ({ children }) => {
                 <NavLink
                   to={route.path}
                   key={index}
-                  className="link"
+                  className="link d-flex align-items-center"
                   activeClassName="active"
+                  style={{textDecoration: 'none'}}
                 >
                   <div className="icon">{route.icon}</div>
                   <AnimatePresence>
@@ -170,7 +169,7 @@ const SideBar = ({ children }) => {
                         initial="hidden"
                         animate="show"
                         exit="hidden"
-                        className="link_text"
+                        className="link_text fw-bold"
                       >
                         {route.name}
                       </motion.div>
