@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { useNavigate, Link } from "react-router-dom";
 import '../css/Header.css';
 import {FaRegBell} from "react-icons/fa";
+import Dropdown from 'react-bootstrap/Dropdown';
 // import {BsFillArrowRightCircleFill} from "react-icons/bs"
 import {CiSquarePlus} from "react-icons/ci";
 
@@ -26,10 +27,10 @@ window.onclick = function(event) {
 
 const Header = () => {
     let navigate = useNavigate(); 
-    const addTask = () => { 
-        let path = '/addTask'; 
-        navigate(path);
-    }
+    // const addTask = () => { 
+    //     let path = '/assignTask'; 
+    //     navigate(path);
+    // }
 
     return (
             // <div className='full-screen'>
@@ -46,7 +47,19 @@ const Header = () => {
                             </ul>
                         </div>
                         
-                        <p onClick={addTask}><CiSquarePlus style={{marginBottom:'3px'}}/> Add task</p>
+                        {/* <p onClick={addTask}><CiSquarePlus style={{marginBottom:'3px'}}/> Add task</p> */}
+
+                        <Dropdown>
+                            <Dropdown.Toggle variant='success' className='add-task'>
+                                <CiSquarePlus style={{marginBottom:'3px'}}/> Add Task
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item onClick={() => {navigate('/assign_collector')}}>Assign for collector</Dropdown.Item>
+                                <Dropdown.Divider />
+                                <Dropdown.Item onClick={() => {navigate('/assign_janitor')}}>Assign for janitor</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
                     </div>
 
                     <div class="dropdown">
